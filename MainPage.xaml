@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MechAp.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="DarkRed" Padding="36" Margin="0" CornerRadius="0">
+            <Label Text="Welcome to&#xA;MechAp" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Frame BackgroundColor="DarkBlue" Padding="20" Margin="-10" CornerRadius="0">
+            <Label Text="Keep Your Car Running" HorizontalTextAlignment="Center" TextColor="White" FontSize="20"/>
+        </Frame>
+        <Frame BackgroundColor="LightGray" Padding="100" Margin="30 30 0 30" CornerRadius="30">
+            <Label Text="Logo Placeholder" HorizontalTextAlignment="Center" TextColor="Gray" FontSize="20"/>
+        </Frame>
+        <Button Text="Log In" Margin="30 100 30 100" CornerRadius="30"/>
+        <Label HorizontalTextAlignment="Center" Margin="-10">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="New? Register here."
+                          TextColor="Blue"
+                          TextDecorations="Underline">
+                        <Span.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                  CommandParameter="https://docs.microsoft.com/xamarin/" />
+                        </Span.GestureRecognizers>
+                    </Span>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>
